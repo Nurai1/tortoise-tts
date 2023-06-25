@@ -16,15 +16,18 @@ I *finally* converted the "doc" to a arxiv entry: https://arxiv.org/abs/2305.072
 - Add better debugging support; existing tools now spit out debug files which can be used to reproduce bad runs.
 
 #### v2.3; 2022/5/12
+
 - New CLVP-large model for further improved decoding guidance.
 - Improvements to read.py and do_tts.py (new options)
 
 #### v2.2; 2022/5/5
+
 - Added several new voices from the training set.
 - Automated redaction. Wrap the text you want to use to prompt the model but not be spoken in brackets.
 - Bug fixes
 
 #### v2.1; 2022/5/2
+
 - Added ability to produce totally random voices.
 - Added ability to download voice conditioning latent via a script, and then use a user-provided conditioning latent.
 - Added ability to use your own pretrained models.
@@ -87,6 +90,7 @@ If you are on windows, you may also need to install pysoundfile: `conda install 
 ### do_tts.py
 
 This script allows you to speak a single phrase with one or more voices.
+
 ```shell
 python tortoise/do_tts.py --text "I'm going to speak this" --voice random --preset fast
 ```
@@ -133,7 +137,7 @@ For the those in the ML space: this is created by projecting a random vector ont
 
 ### Provided voices
 
-This repo comes with several pre-packaged voices. Voices prepended with "train_" came from the training set and perform
+This repo comes with several pre-packaged voices. Voices prepended with "train\_" came from the training set and perform
 far better than the others. If your goal is high quality speech, I recommend you pick one of them. If you want to see
 what Tortoise can do for zero-shot mimicking, take a look at the others.
 
@@ -171,7 +175,7 @@ set the defaults to the best overall settings I was able to find. For specific u
 these settings (and it's very likely that I missed something!)
 
 These settings are not available in the normal scripts packaged with Tortoise. They are available, however, in the API. See
-```api.tts``` for a full list.
+`api.tts` for a full list.
 
 ### Prompt engineering
 
